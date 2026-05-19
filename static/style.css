@@ -1,0 +1,58 @@
+.head{
+    display: grid;
+    grid-template-rows: 3;
+    justify-content: center;
+    align-content: center;
+    /* height: 650px; */
+    /* width: 900px; */
+    background-image: linear-gradient(to bottom, whitesmoke, orange);
+}
+
+
+
+.form {
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    /* flex-direction: column; */
+    border: 2px solid orange;
+    background-color: whitesmoke;
+    width: 650px;
+    border-radius: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+.changa {
+    font-family: "Changa", sans-serif;
+    text-align: center;
+    /* font-style: blue; */
+    font-size:70px;
+}
+.text{
+    font-size: 60px;
+    
+
+}
+.one {
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+    /* justify-content: center; */
+
+}
+.area{
+    width:300px;
+    height: 50px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.output{
+    border: 2px solid grey;
+    background-color: bisque;
+    border-radius: 20px;
+    margin: 20px;
+    height: 100px;
+    width:450px ;
+    overflow: auto;
+}
