@@ -14,11 +14,9 @@
     rel="stylesheet">
     
     <body>
-        <div class="head">
-                <div class="one">
-                    <h1 class="changa">Ascii-Art-Stylize</h1>
-                </div>
+        <div class="container">
                 <div class="form">
+                    <h1 class="one">Ascii-Art-Stylize</h1>
                     <form action="/ascii" method="post">
                         <h1 class="text">Ascii art</h1>
                         <textarea  class="area" name="text" placeholder="Input Text"></textarea>
@@ -31,7 +29,9 @@
                         <button type="submit">Generate ascii</button>
                     </form>
                     <div class="output">
-                        <pre>{{.Output}}</pre>
+                 
+                          <pre>{{.Output}}</pre>
+                        
                     </div>
                 </div>
              
