@@ -1,6 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color:black;
-    overflow:auto;
+    overflow:auto; 
     height: 100vh;
 }
 
@@ -27,7 +33,7 @@ body{
 
 }
 .changa {
-    font-family: "Changa", sans-serif;
+    /* font-family: "Changa", sans-serif; */
     text-align: center;
     /* font-style: blue; */
     font-size:60px;
@@ -65,4 +71,9 @@ body{
     width:450px ;
     height: 100px;
     overflow: auto;
+    
+}
+
+pre{
+    text-align: center;
 }
