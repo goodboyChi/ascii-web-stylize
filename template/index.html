@@ -6,28 +6,29 @@
         <title>Ascii-web</title>
         <link rel="stylesheet" href="/static/style.css">
     </head>
-<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
 
-<!-- <link
-    href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Changa:wght@200..800&display=swap"
-    rel="stylesheet"> -->
-    
     <body>
         <div class="container">
                 <div class="form">
-                    <h1 class="one">Ascii-Art-Stylize</h1>
+                    <div class="one">
+                    <h1 class="ascii">Ascii-Art-Stylize</h1>
+                    <h1 class="text">Ascii art</h1>
+                    </div>
+                 
                     <form action="/ascii" method="post">
-                        <h1 class="text">Ascii art</h1>
+                     
                         <textarea  class="area" name="text" placeholder="Input Text"></textarea>
-                        <p> Choose a banner file</p>
-                        <select name="banner">
-                            <option value="standard">standard</option>
-                            <option value="shadow"> shadow</option>
-                            <option value="thinkertoy">Thinkertoy</option>
-                        </select>
-                        <button type="submit">Generate ascii</button>
-                    </form>
+                        <div class="option">
+                            <p> Choose a banner file</p>
+                            <select name="banner">
+                                <option value="standard">standard</option>
+                                <option value="shadow"> shadow</option>
+                                <option value="thinkertoy">Thinkertoy</option>
+                            </select>
+                            <button type="submit">Generate ascii</button>
+                            </form>
+                        </div>
+                     
                     <div class="output">
                  
                           <pre>{{.Output}}</pre>
