@@ -78,3 +78,23 @@ pre{
 .one{
     align-self: center;
 }
+.banner{
+    cursor: pointer;
+    border: none;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.submit{
+    background-color: black;
+    color: white;
+}
+
+.submit:hover{
+    background-color:#8b8585 ;
+    color:#fff ;
+}
+.banner-text{
+font-size: 20px;
+
+}
