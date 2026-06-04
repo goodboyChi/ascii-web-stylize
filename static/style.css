@@ -20,8 +20,14 @@ body{
     place-items: center;
     height: 100%;
     background-color:rgb(14, 14, 14);
-}
 
+}
+.overlay {
+    /* display: block; */
+    position: fixed;
+    inset: 0;
+    background: rgba(red, green, blue, alpha);
+}
 
 
 .form {
