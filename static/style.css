@@ -9,10 +9,15 @@
     box-sizing: border-box;
 }
 
+/* h1{
+    color: #f1f5f9;
+    z-index: 100000;
+} */
+
 body{
-    background-color:black;
+    background-color:white;
     overflow:auto; 
-    height: 100vh;
+    /* height: 100vh; */
     /* z-index: 20; */
 }
 
@@ -21,12 +26,11 @@ body{
     place-items: center;
     height: 100%;
     background-color:rgb(14, 14, 14);
-
 }
+
 .overlay {
-    /* display: block; */
-    position: fixed;
-    inset: 0;
+    width:100vw;
+    height:100vh;
     background: rgba(red, green, blue, alpha);
 }
 
@@ -106,14 +110,13 @@ font-size: 20px;
 
 }
 .over{
-    position:fixed;
+   
     background:rgba(30, 85, 122, 0.2);
    height: 100vh;
    width:100%;
    left: 0;
    right: 0;
    z-index: 30;
-    /* display: none;///////////// */
 
 }
 
@@ -122,23 +125,20 @@ font-size: 20px;
     background: white;
     background-color: white;
     border: 3px solid white;
-    width: 120vh;
+    width: 100vw;
     height: 100vh;
-    /* transform: translate(-50%,-50%); */
-    /* visibility: visible; */
-    /* z-index: 90; */
-
     display: flex;
    align-self: center;
    justify-self: center;
+   visibility: none;
+   opacity: 0;
 }
 .instruction{
     text-align: center;
 }
 #click{
     display: none;
-    /* left: 90%; */
-    /* color: blue; */
+  
 }
 #click:checked~.over{
     display: block;
@@ -146,4 +146,8 @@ font-size: 20px;
 .sign{
     position: absolute;
     left: 70%;
+}
+
+.pop-up-btn{
+    color: white;
 }
