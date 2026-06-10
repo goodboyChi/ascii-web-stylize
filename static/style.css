@@ -117,28 +117,31 @@ font-size: 20px;
    width:100%;
    left: 0;
    right: 0;
- 
- display: none;
+
+ opacity: 0;
+ pointer-events: none;
+ transition: opacity 0.3s ease-out;
 
 }
 
 .popup{
     position: fixed;
     background: #1e293b;
-    /* background-color: #0f172a; */
     color: #f8fafc;
     border: 1px solid #334155;
     box-shadow: 0 20px 40px rgba(0, 0,0, 0.4);
-    border-radius: 2%;
     padding: 1%;
-    width: 90vh;
+    width: 100vh;
     height: 100vh;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-   opacity: 1;
+    transform: translate(-50%,-50%) scale(0.2);
+    transition: transform 0.9s ease-out,opacity 0.9s ease-out;
+
+   opacity: 0;
     z-index: 30;
 }
+
 .instruction{
     position: absolute;
     left: 90%;
@@ -148,10 +151,14 @@ font-size: 20px;
 }
 #click{
     display: none;
-  
 }
 #click:checked~.over{
-    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+#click:checked~.over .popup {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 }
 .sign{
     position: absolute;
