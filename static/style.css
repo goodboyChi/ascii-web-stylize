@@ -16,14 +16,51 @@
     
 }
 
-@keyframes rotate{
-    0%{
-        transform: translateX(0,0) rotate(-15deg);
+@keyframes rotate {
+    from {
+        transform: rotate(-30deg) translateX(-700px);
+        opacity: 0.5;
     }
-    100%{
-        transform: translate(300px,-300px) rotate(-15deg) ;
+
+    to {
+        transform: rotate(-30deg) translateX(500px);
+        opacity: 0.5;
     }
 }
+@keyframes left {
+    from {
+        transform: rotate(30deg) translateX(400px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: rotate(30deg) translateX(-500px);
+        opacity: 0.5;
+    }
+}
+@keyframes right {
+    from {
+        transform: rotate(-30deg) translateX(400px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: rotate(-30deg) translateX(-500px);
+        opacity: 0.5;
+    }
+}
+@keyframes buttom {
+    from {
+        transform: rotate(30deg) translateX(-400px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: rotate(30deg) translateX(500px);
+        opacity: 0.5;
+    }
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -36,20 +73,71 @@
 } */
 
 body{
-    background-color:#0f172a;
-    overflow:auto; 
+    background-color:black;
+    overflow:auto;
+    z-index: -2;
 }
 
 .v{
     position: fixed;
     color: white;
-    z-index: 10;
-    top:  200px;
-    left: -100px;
+    z-index: -1;
+    top:  30px;
+    left: -50px;
+    transform: rotate(-15deg);
 
-    font-size: 20px;
+    font-size: 40px;
 
     animation:  rotate 6s linear infinite;
+    animation-delay: 0s;
+    user-select: none;
+
+    text-shadow: 0px 2px 30px rgba(215, 212, 207, 0.873);
+}
+.w {
+    position: fixed;
+    color: white;
+    z-index: -1;
+    top: 30px;
+    left: 500px;
+    transform: rotate(15deg);
+
+    font-size: 40px;
+
+    animation: left 6s linear infinite reverse;
+    animation-delay: 1.5s;
+    user-select: none;
+
+    text-shadow: 0px 2px 30px rgba(215, 212, 207, 0.873);
+}
+.x{
+    position: fixed;
+    color: white;
+    z-index: -1;
+    top: 550px;
+    left: 500px;
+    transform: rotate(-30deg);
+
+    font-size: 40px;
+
+    animation: right 6s linear infinite;
+    animation-delay: 3.0s;
+    user-select: none;
+
+    text-shadow: 0px 2px 30px rgba(215, 212, 207, 0.873);
+}
+.y {
+    position: fixed;
+    color: white;
+    z-index: -1;
+    top: 550px;
+    left: 50px;
+    transform: rotate(30deg);
+
+    font-size: 40px;
+
+    animation: buttom 6s linear infinite reverse;
+    animation-delay: 4.5s;
     user-select: none;
 
     text-shadow: 0px 2px 30px rgba(215, 212, 207, 0.873);
@@ -59,7 +147,7 @@ body{
     display: grid;
     place-items: center;
     height: 100%;
-    background-color:rgb(14, 14, 14);
+    z-index: 10;
 }
 
 .overlay {
@@ -67,6 +155,7 @@ body{
     height:100vh;
     background: rgba(red, green, blue, alpha);
 }
+
 .overbox {
     position: fixed;
     inset: 0;
