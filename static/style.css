@@ -18,7 +18,7 @@
 
 @keyframes rotate {
     from {
-        transform: rotate(-30deg) translateX(-700px);
+        transform: rotate(-30deg) translateX(-400px);
         opacity: 0.5;
     }
 
@@ -60,6 +60,19 @@
         opacity: 0.5;
     }
 }
+@keyframes but {
+    from {
+        transform: rotate(-30deg) translateX(400px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: rotate(-30deg) translateX(-500px);
+        opacity: 0.5;
+    }
+}
+
+
 
 *{
     padding: 0;
@@ -82,14 +95,15 @@ body{
     position: fixed;
     color: white;
     z-index: -1;
-    top:  30px;
-    left: -50px;
+    top: 30px;
+    left: 10px;
+
     transform: rotate(-15deg);
 
     font-size: 40px;
 
     animation:  rotate 6s linear infinite;
-    animation-delay: 0s;
+    animation-delay: 15s;
     user-select: none;
 
     text-shadow: 0px 2px 30px rgba(215, 212, 207, 0.873);
@@ -105,7 +119,7 @@ body{
     font-size: 40px;
 
     animation: left 6s linear infinite reverse;
-    animation-delay: 1.5s;
+    /* animation-delay: 15s; */
     user-select: none;
 
     text-shadow: 0px 2px 30px rgba(215, 212, 207, 0.873);
@@ -121,7 +135,7 @@ body{
     font-size: 40px;
 
     animation: right 6s linear infinite;
-    animation-delay: 3.0s;
+    animation-delay: 15s;
     user-select: none;
 
     text-shadow: 0px 2px 30px rgba(215, 212, 207, 0.873);
@@ -131,18 +145,55 @@ body{
     color: white;
     z-index: -1;
     top: 550px;
-    left: 50px;
+    left: 5px;
     transform: rotate(30deg);
 
     font-size: 40px;
 
     animation: buttom 6s linear infinite reverse;
-    animation-delay: 4.5s;
+    /* animation-delay: 15s; */
     user-select: none;
 
     text-shadow: 0px 2px 30px rgba(215, 212, 207, 0.873);
 }
+.z {
+    position: fixed;
+    color: white;
+    z-index: -1;
+    top: 50%;
+    /* left: 50; */
+ 
 
+    font-size: 40px;
+
+    animation: buttom 6s linear infinite reverse;
+    /* animation-delay: 15s; */
+    user-select: none;
+
+    text-shadow: 0px 2px 30px rgba(215, 212, 207, 0.873);
+}
+.ok {
+    position: fixed;
+    color: white;
+    z-index: -1;
+    top: 50%;
+    /* left: 500px; */
+
+
+    font-size: 40px;
+
+    animation: but 6s linear infinite reverse;
+    /* animation-delay: 15s; */
+    user-select: none;
+
+    text-shadow: 0px 2px 30px rgba(215, 212, 207, 0.873);
+}
+.v,.x{
+    opacity: 0;
+}
+.w::after{
+    animation-delay:20s ;
+}
 .container{
     display: grid;
     place-items: center;
@@ -176,7 +227,7 @@ body{
 .text{
     font-size: 30px;
     /* color: lightgoldenrodyellow; */
-
+    
 }
 .ascii {
     font-family: 'regular';
@@ -191,7 +242,7 @@ body{
     padding: 20px;
     align-items: center;
     /* transition: border 0.3s ease; */
-  
+    
 }
 
 .output{
@@ -234,14 +285,14 @@ font-size: 20px;
 
 }
 .over{
-   position: fixed;
+    position: fixed;
     background:rgba(0, 0, 0, 0.55);
    height: 100vh;
    width:100%;
    left: 0;
    right: 0;
-
- opacity: 0;
+   
+   opacity: 0;
  pointer-events: none;
  transition: opacity 0.3s ease-out;
 
@@ -261,7 +312,7 @@ font-size: 20px;
     transform: translate(-50%,-50%) scale(0.2);
     transition: transform 0.9s ease-out,opacity 0.9s ease-out;
 
-   opacity: 0;
+    opacity: 0;
     z-index: 30;
 }
 
@@ -273,7 +324,7 @@ font-size: 20px;
     background: #1e293b;
     color: white;
     border: 1px solid #475569;
-
+    
     /* color: black; */
     cursor: pointer;
     border: 2px solid none;
@@ -305,3 +356,15 @@ font-size: 20px;
 .sign:hover{
     color: #f8fafc;
 }
+
+.v,.w,.x,.y{
+    -webkit-text-stroke:2px #d50ebaa8;
+filter: brightness(150%);
+    color: transparent;
+}
+.z,.ok {
+    -webkit-text-stroke: 2px #00d4ff;
+    color: transparent;
+    filter: brightness(150%);
+}
+
