@@ -22,7 +22,6 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error 404: You typed a wrong link", http.StatusNotFound)
 		return
 	}
-
 	tmpl.Execute(w, data)
 }
 
