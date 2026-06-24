@@ -376,7 +376,7 @@ font-size: 20px;
     cursor: pointer;
     /* color: #94a3b8; */
      color: red;
-    font-size: 24px;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -406,6 +406,11 @@ font-size: 20px;
 }
 .option{
     margin-top: 5px;
+    /* text-align: center; */
+}
+.opt {
+    margin-top: -5px;
+    text-align: center;
 }
 .style{
     margin-left: 15px;
@@ -413,12 +418,14 @@ font-size: 20px;
 .pr{
     text-align: left;
     color: black;
-    /* text-align: left; */
-        /* white-space: pre; */
         margin-top: 15px;
-        /* padding-left: 0; */
     background: white;
     border: 1px solid white;
+    border-radius: 10px;
     border: 20px;
+}
 
+.instruct{
+    text-align: center;
+    font-size: 40px;
 }
